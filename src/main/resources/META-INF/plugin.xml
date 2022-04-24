@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>com.milo.OpenCurrentActivity</id>
+    <name>OpenCurrentActivityPlugin</name>
+    <vendor email="hwbmilo@gmail.com">Milo Huang</vendor>
+
+    <description><![CDATA[
+     An action to open the class corresponding to the currently shown Activity on the attached Android device or emulator.<br/>
+        <br/>
+        This action can be found under <b>Navigate / Current Activity</b>.<br/>
+        <br/>
+        The default keyboard shortcut is <b>Ctrl F10</b> (PC), <b>⌘ F10</b> (Mac).<br/>
+        <br/>
+        <b>Development</b><br/>
+        <br/>
+        <a href="https://github.com/BoD/OpenCurrentActivityIntelliJPlugin/">https://github.com/BoD/OpenCurrentActivityIntelliJPlugin/</a>
+        <br/>
+        <br/>
+    ]]></description>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.lang</depends>
+    <depends>com.intellij.modules.java</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <action class="com.milo.OpenCurrentActivityAction"
+                id="OpenCurrentActivityAction"
+                text="Open Current Activity">
+            <keyboard-shortcut first-keystroke="control F10" keymap="$default"/>
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
